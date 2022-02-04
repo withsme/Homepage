@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Publication() {
+function PI() {
     return (
         <div>
-           Publication Page 
+           PI Page 
         </div>
     );
 };
 
-export default Publication;
+export default PI;

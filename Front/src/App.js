@@ -9,21 +9,13 @@ import Header from './Component/Header';
 import Footer from './Component/Footer';
 
 /* Page */
-import Main from './Page/Main';
-import About from './Page/About';
-import Professor from './Page/Professor';
-import Projects from './Page/Projects';
-import Publication from './Page/Publication';
-import Teaching from './Page/Teaching';
-import Activity from './Page/Activity';
-import Board from './Page/Board';
-import Contact from './Page/Contact';
+import Home from './Page/HomePage/Home';
 
 function App() {
   return (
     <>
       <Header /> 
-      <Main />
+      <Home />
       <Footer />
     </>
   );

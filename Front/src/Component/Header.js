@@ -8,7 +8,7 @@ const { TabPane } = Tabs;
 
 const routes = [
     {
-        path: '/about',
+        path: '/home',
         key: '1',
     },
     {
@@ -30,14 +30,14 @@ function Header () {
                 }}
             >
                 <Tabs>
-                    <TabPane tab="About" key= "1" breadcrumb={{ routes }}/>
-                    <TabPane tab="Professor" key= "2" />
-                    <TabPane tab="Projects" key= "3" />
-                    <TabPane tab="Publication" key= "4" />
-                    <TabPane tab="Teaching" key= "5" />
-                    <TabPane tab="Activity" key= "6" />
-                    <TabPane tab="Board" key= "7" />
-                    <TabPane tab="Contact" key= "8" />
+                    <TabPane tab="Home" key= "1" breadcrumb={{ routes }}/>
+                    <TabPane tab="News" key= "2" />
+                    <TabPane tab="Activity" key= "3" />
+                    <TabPane tab="Research Area" key= "4" />
+                    <TabPane tab="PI" key= "5" />
+                    <TabPane tab="Students" key= "6" />
+                    <TabPane tab="Projects" key= "7" />
+                    <TabPane tab="Publications" key= "8" />
                 </Tabs> 
             </PageHeader>
         </>

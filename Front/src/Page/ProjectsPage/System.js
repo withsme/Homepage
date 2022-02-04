@@ -1,11 +1,11 @@
 import React from 'react';
 
-function About() {
+function System() {
     return (
         <div>
-           About Page 
+           System Page 
         </div>
     );
 };
 
-export default About;
+export default System;

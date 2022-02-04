@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Board() {
+function News() {
     return (
         <div>
-           Board Page 
+           News Page 
         </div>
     );
 };
 
-export default Board;
+export default News;

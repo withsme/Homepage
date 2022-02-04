@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Contact() {
+function Alumnui() {
     return (
         <div>
-           Contact Page 
+           Alumnui Page 
         </div>
     );
 };
 
-export default Contact;
+export default Alumnui;
