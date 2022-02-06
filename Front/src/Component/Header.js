@@ -1,23 +1,22 @@
 import React from 'react'; 
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { PageHeader, Tabs } from 'antd';
+import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import styled from "styled-components";
 
 function Header () {
-    return (
-        <Wrapper>
-            <Logo>CI Lab @ KIT</Logo>
-            <Link to = '/'> <Button>Home</Button> </Link>
-            <Link to = '/news'> <Button>News</Button> </Link>
-            <Link to = '/activity'><Button>Activity</Button> </Link>
-            <Link to = '/researchArea'><Button>Research Area</Button> </Link>
-            <Link to = '/pi'><Button>PI</Button> </Link>
-            <Link to = '/students'><Button>Students</Button> </Link>
-            <Link to = '/projects'><Button>Projects</Button> </Link>
-            <Link to = '/publications'><Button>Publications</Button> </Link>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Logo>CI Lab @ KIT</Logo>
+      <Link to = '/'> <Button>Home</Button> </Link>
+      <Link to = '/news'> <Button>News</Button> </Link>
+      <Link to = '/activity'><Button>Activity</Button> </Link>
+      <Link to = '/researchArea'><Button>Research Area</Button> </Link>
+      <Link to = '/pi'><Button>PI</Button> </Link>
+      <Link to = '/students'><Button>Students</Button> </Link>
+      <Link to = '/projects'><Button>Projects</Button> </Link>
+      <Link to = '/publications'><Button>Publications</Button> </Link>
+    </Wrapper>
+  );
 } 
 
 const Wrapper = styled.div`

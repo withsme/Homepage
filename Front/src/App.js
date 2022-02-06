@@ -1,10 +1,5 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { Switch } from 'antd';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import axios from "axios";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /* Component */
 import Header from './Component/Header';
@@ -28,21 +23,20 @@ function App() {
   return (
     <BrowserRouter>
       <Header /> 
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/news' component={News} />
-        <Route exact path='/activity' component={Activity} />
-        <Route exact path='/researchArea' component={ResearchArea} />
-        <Route exact path='/pi' component={PI} />
-        <Route exact path='/students' component={Students} />
-        <Route exact path='/graduateStudents' component={GraduateStudents} />
-        <Route exact path='/undergraduateStudents' component={UndergraduateStudents} />
-        <Route exact path='/alumni' component={Alumni} />
-        <Route exact path='/projects' component={Projects} />
-        <Route exact path='/system' component={System} />
-        <Route exact path='/publications' component={Publications} />
-      </Switch>
-      <Home />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/news' element={<News />} />
+        <Route path='/activity' element={<Activity />} />
+        <Route path='/researchArea' element={<ResearchArea />} />
+        <Route path='/pi' element={<PI />} />
+        <Route path='/students' element={<Students />} />
+        <Route path='/graduateStudents' element={<GraduateStudents />} />
+        <Route path='/undergraduateStudents' element={<UndergraduateStudents />} />
+        <Route path='/alumni' element={<Alumni />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/system' element={<System />} />
+        <Route path='/publications' element={<Publications />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
