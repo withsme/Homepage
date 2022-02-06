@@ -1,23 +1,8 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { PageHeader, Tabs } from 'antd';
 import 'antd/dist/antd.css';
-import '../index.css';
-const { TabPane } = Tabs;
-
-const routes = [
-    {
-        path: '/home',
-        key: '1',
-    },
-    {
-
-    },
-    {
-
-    },
-]
+import styled from "styled-components";
 
 function Header () {
     return (
@@ -29,19 +14,35 @@ function Header () {
                     width : "flex",
                 }}
             >
-                <Tabs>
-                    <TabPane tab="Home" key= "1" breadcrumb={{ routes }}/>
-                    <TabPane tab="News" key= "2" />
-                    <TabPane tab="Activity" key= "3" />
-                    <TabPane tab="Research Area" key= "4" />
-                    <TabPane tab="PI" key= "5" />
-                    <TabPane tab="Students" key= "6" />
-                    <TabPane tab="Projects" key= "7" />
-                    <TabPane tab="Publications" key= "8" />
-                </Tabs> 
+                <Link to = '/'> <Content>Home</Content> </Link>
+                <Link to = '/news'> <Content>News</Content> </Link>
+                <Link to = '/activity'><Content>Activity</Content> </Link>
+                <Link to = '/researchArea'><Content>Research Area</Content> </Link>
+                <Link to = '/pi'><Content>PI</Content> </Link>
+                <Link to = '/students'><Content>Students</Content> </Link>
+                <Link to = '/projects'><Content>Projects</Content> </Link>
+                <Link to = '/publications'><Content>Publications</Content> </Link>
             </PageHeader>
         </>
     );
 } 
+
+const Wrapper = styled.div`
+  height: 5rem;
+  color: black;
+  background-color: white;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+`;
+
+const Logo = styled.div`
+  padding: 0% 0% 0% 1%;
+  font-size: 2rem;
+`;
+
+const Content = styled.button`
+  padding: 0% 0% 0% 5%;
+  font-size: 1.8rem;
+`;
 
 export default Header;
