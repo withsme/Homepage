@@ -30,17 +30,17 @@ function App() {
       <Header /> 
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/news' component={News} />
-        <Route path='/activity' component={Activity} />
-        <Route path='/researchArea' component={ResearchArea} />
-        <Route path='/pi' component={PI} />
-        <Route path='/students' component={Students} />
-        <Route path='/graduateStudents' component={GraduateStudents} />
-        <Route path='/undergraduateStudents' component={UndergraduateStudents} />
-        <Route path='/alumni' component={Alumni} />
-        <Route path='/projects' component={Projects} />
-        <Route path='/system' component={System} />
-        <Route path='/publications' component={Publications} />
+        <Route exact path='/news' component={News} />
+        <Route exact path='/activity' component={Activity} />
+        <Route exact path='/researchArea' component={ResearchArea} />
+        <Route exact path='/pi' component={PI} />
+        <Route exact path='/students' component={Students} />
+        <Route exact path='/graduateStudents' component={GraduateStudents} />
+        <Route exact path='/undergraduateStudents' component={UndergraduateStudents} />
+        <Route exact path='/alumni' component={Alumni} />
+        <Route exact path='/projects' component={Projects} />
+        <Route exact path='/system' component={System} />
+        <Route exact path='/publications' component={Publications} />
       </Switch>
       <Home />
       <Footer />
