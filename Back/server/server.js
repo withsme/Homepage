@@ -6,10 +6,6 @@ const port = 5000;
 
 app.use(express.json());
 
-// const http = require('http').createServer(app);
-// http.listen(5000, function () {
-//   console.log('listening on 5000')
-// }); 
 app.listen(port, () => console.log('listening on 5000'));
 
 app.use(express.static(path.join(__dirname, '../../Front/build')));

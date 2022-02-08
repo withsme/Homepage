@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { Row, Col } from 'antd';
+import Footer from '../../Component/Footer';
 
 function Home() {
   return (
@@ -70,6 +71,8 @@ function Home() {
           </Col>
         </Row>
       </Wrapper>
+      
+      <Footer />
     </>
   );
 }

@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /* Component */
 import Header from './Component/Header';
-import Footer from './Component/Footer';
 
 /* Page */
 import Home from './Page/HomePage/Home';
@@ -16,7 +15,7 @@ import GraduateStudents from './Page/StudentsPage/GraduateStudents';
 import UndergraduateStudents from './Page/StudentsPage/UndergraduateStudents';
 import Alumni from './Page/StudentsPage/Alumni';
 import Projects from './Page/ProjectsPage/Projects';
-import System from './Page/ProjectsPage/Projects';
+import System from './Page/ProjectsPage/System';
 import Publications from './Page/PublicationsPage/Publications';
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
         <Route path='/system' element={<System />} />
         <Route path='/publications' element={<Publications />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }

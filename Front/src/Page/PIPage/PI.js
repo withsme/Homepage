@@ -9,11 +9,11 @@ function PI() {
                 PI
             </Title>
             <Wrapper>
-                <Row>
-                    <Col flex ="50%">
-                        <img src={ require('../../img/pi.jpg') } />
+                <Row justify="center">
+                    <Col flex ="35%">
+                        <img src={ require('../../img/pi.jpg') } width='400px' height='auto'/>
                     </Col>
-                    <Col flex ="50%">
+                    <Col flex ="35%">
                         Assistant Prof.   <Emp>Yuchul Jung</Emp>
                     </Col>
                 </Row>
@@ -23,10 +23,10 @@ function PI() {
             </SubTitle>
             <Wrapper>
                 <Content>
-                    <Emp>「 2011 Ph.D. </Emp>」 Department of Computer Science, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea
+                    <Emp>「 2011 Ph.D.」</Emp> Department of Computer Science, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea
                     <p>‣ Dissertation : An Activity Knowledge Base from Multiple Resources: Construction and Utilizations</p>
                     <p>‣ Advisor : Dr. Sung-Hyon Myaeng</p>
-                    <Emp>「 2005  M.S. </Emp>」 Digital Media, Department of Information and Communications, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea
+                    <Emp>「 2005  M.S.」</Emp> Digital Media, Department of Information and Communications, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea
                     <p>‣ Dissertation : Case-Based Reasoning Approach to Task Planning of Home-Service Robots</p>
                     <p>‣ Advisor : Dr. Yong. K Hwang</p>
                     <Emp>「 2003 B.S. 」</Emp> Department of Information and Communications, Ajou Univ., Suwon, Korea
@@ -38,8 +38,8 @@ function PI() {
             <Wrapper>
                 <Content>
                     <Emp>「 2018.03 ~ Current 」</Emp>
-                    <p>공공데이터전략위원회, 데이터관리체계 전문위원</p>
-                    <p>한국데이터사이언스 학회 이사</p>
+                    <p> 공공데이터전략위원회, 데이터관리체계 전문위원 </p>
+                    <p>  한국데이터사이언스 학회 이사 </p>
                     <Emp>「 2017.08 ~ Current 」</Emp>
                     <p>Assistant Professor, Department of Computer Engineering, Kumoh National Institute of Technology (KIT)</p>
                     <Emp>「 2017.01 ~ 2017.08 」</Emp>
@@ -85,6 +85,8 @@ const Emp = styled.button`
   border: 0px;
   color: black;
   background-color: white;
+  padding: 0.5% 0.5% 0% 0%;
+  font-size: 1.15rem;
 `;
 
 const Content = styled.div`
@@ -92,8 +94,8 @@ const Content = styled.div`
   color: black;
 
   p {
-    padding: 0% 0% 0% 4%;
-    font-size: 1rem;
+    padding: 0.5% 0% 0% 3%;
+    font-size: 1.1rem;
   }
 `;
 

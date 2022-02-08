@@ -12,19 +12,15 @@ function ResearchArea() {
                 </p>
             </Title>
             <Wrapper>
-                <Row gutter={[24, 32]}>
-                    <Col flex="30%">
-                        {/* <BGImageContainer
-                            source={require("../../img/information.PNG")}
-                            resizeMode="stretch"
-                        >
-                        </BGImageContainer> */}
+                <Row justify="center">
+                    <Col flex="20%">
+                        <img src={ require('../../img/information.PNG') } width='380px' height='auto'/>
                         <Area>
-                        Information Retrieval and Natural Language Processing
+                            Information Retrieval and Natural Language Processing
                         </Area>
                     </Col>
-                    <Col flex="70%">
-                     <Content>
+                    <Col flex="60%">
+                     <Content> 
                         <ul>
                             <li>Information Retrieval: Query expansion using Web resources / Social search</li>
                             <li>Knowledge Construction: Activity & situation knowledge construction / English-Korean commonsense knowledge construction</li>
@@ -40,86 +36,106 @@ function ResearchArea() {
                         </ul>
                      </Content>
                     </Col>
-                    <Col flex="70%">
+                </Row>
+                <Row justify="center">
+                    <Col flex="59%">
                      <Content>
-                        <ul>
-                            <li>Cognitive Architecture & Knowledge Support for Human-Robot Interaction</li>
-                            <li>Case-based Reasoning for Human-level Intelligence (or Domain Experts)</li>
-                        </ul>
+                        <p>
+                            <ul>
+                                <li>Cognitive Architecture & Knowledge Support for Human-Robot Interaction</li>
+                                <li>Case-based Reasoning for Human-level Intelligence (or Domain Experts)</li>
+                            </ul>
+                        </p>
                      </Content>
                     </Col>
-                    <Col flex="30%">
-                     {/* <img src={ require('../../img/robot.PNG') } width='100px' height='100px'/> */}
+                    <Col flex="20%">
+                     <img src={ require('../../img/robot.PNG') } width='450px' height='auto'/>
                      <Area>
                         SW based Robotics
                      </Area>
                     </Col>
-                    <Col flex="30%">
-                     {/* <img src={ require('../../img/service.jpg') } /> */}
+                </Row>
+                <Row justify="center">
+                    <Col flex="20%">
+                     <img src={ require('../../img/service.jpg') } width='390px' height='auto'/>
                      <Area>
                         Service Platforms 
                      </Area>
                     </Col>
-                    <Col flex="70%">
+                    <Col flex="60%">
                      <Content>
-                        <ul>
-                            <li>Service Platform: Service registry, service composition, service mashup</li>
-                            <li>Semantic Web: Semantic service annotation / Goal-based semantic service discovery</li>
-                        </ul>
+                        <p>
+                            <ul>
+                                <li>Service Platform: Service registry, service composition, service mashup</li>
+                                <li>Semantic Web: Semantic service annotation / Goal-based semantic service discovery</li>
+                            </ul>
+                        </p>
                      </Content>
                     </Col>
-                    <Col flex="70%">
+                </Row>
+                <Row justify="center">
+                    <Col flex="60%">
                      <Content>
-                        <ul>
-                            <li>Online Health Community Analysis based on NLP techniques</li>
-                            <li>Medicine 2.0</li>
-                            <li>Medical Big Data based Parkins Disease (PD) Estimation</li>
-                            <li>Medical Big Data based Re-admission/Mortality Prediction</li>
-                            <li>Clinical Decision Support System / Medical IR Systems</li>
-                        </ul>
+                        <p>
+                            <ul>
+                                <li>Online Health Community Analysis based on NLP techniques</li>
+                                <li>Medicine 2.0</li>
+                                <li>Medical Big Data based Parkins Disease (PD) Estimation</li>
+                                <li>Medical Big Data based Re-admission/Mortality Prediction</li>
+                                <li>Clinical Decision Support System / Medical IR Systems</li>
+                            </ul>
+                        </p>
                      </Content>
                     </Col>
-                    <Col flex="30%">
-                     {/* <img src={ require('../../img/community.jpg') } /> */}
+                    <Col flex="20%">
+                     <img src={ require('../../img/community.jpg') } width='380px' height='auto'/>
                      <Area>
                         Public Health 
                      </Area>
                     </Col>
-                    <Col flex="30%">
-                     {/* <img src={ require('../../img/AI.PNG') } /> */}
+                </Row>
+                <Row justify="center">
+                    <Col flex="20%">
+                     <img src={ require('../../img/AI.PNG') } width='420px' height='auto'/>
                      <Area>
                         Artificial Intelligence (AI) and Machine Learning Stuffs  
                      </Area>
                     </Col>
-                    <Col flex="70%"> 
+                    <Col flex="60%"> 
                      <Content>
-                        <ul>
-                            <li>Semi-automatic Training Data Generation (e.g. News, Patents, Scientific Articles, Dialogues, etc.)</li>
-                            <li>Classic Machine Learning Algorithms (SVM, S-SVM, CRFs, etc.)</li>
-                            <li>Deep Learning (LSTM/GRU, CNN) and Reinforcement Learning</li>
-                            <li>Large-scale Knowledge Construction for Decision Making and Inference</li>
-                            <li>Development of AI-based Applications</li>
-                            <li>Transfer Learning</li>
-                            <li>Deep Learning Optimization on Neuromorphic Chips.</li>
-                            <li>Korean Speech Recognition on the Edge</li>
-                            <li>◦ Semi-automatic speech data construction</li>
-                            <li>Face Recognition</li>
-                        </ul>
+                        <p>
+                            <ul>
+                                <li>Semi-automatic Training Data Generation (e.g. News, Patents, Scientific Articles, Dialogues, etc.)</li>
+                                <li>Classic Machine Learning Algorithms (SVM, S-SVM, CRFs, etc.)</li>
+                                <li>Deep Learning (LSTM/GRU, CNN) and Reinforcement Learning</li>
+                                <li>Large-scale Knowledge Construction for Decision Making and Inference</li>
+                                <li>Development of AI-based Applications</li>
+                                <li>Transfer Learning</li>
+                                <li>Deep Learning Optimization on Neuromorphic Chips.</li>
+                                <li>Korean Speech Recognition on the Edge</li>
+                                <li>◦ Semi-automatic speech data construction</li>
+                                <li>Face Recognition</li>
+                            </ul>
+                        </p>
                      </Content>
                     </Col>
-                    <Col flex="70%">
+                </Row>
+                <Row justify="center">
+                    <Col flex="60%">
                      <Content>
-                        <ul>
-                            <li>Big Data Analysis for Heterogeneous  Information Resources</li>
-                            <li>Knowledge Mining from Unstructured/Semi-structured Texts</li>
-                            <li>Data Fusion of Heterogeneous Knowledge Bases</li>
-                            <li>Knowledge Population using Open (Government) Data</li>
-                            <li>Semantic Knowledge Integration for Various Kinds of Data</li>
-                        </ul>
+                        <p>
+                            <ul>
+                                <li>Big Data Analysis for Heterogeneous  Information Resources</li>
+                                <li>Knowledge Mining from Unstructured/Semi-structured Texts</li>
+                                <li>Data Fusion of Heterogeneous Knowledge Bases</li>
+                                <li>Knowledge Population using Open (Government) Data</li>
+                                <li>Semantic Knowledge Integration for Various Kinds of Data</li>
+                            </ul>
+                        </p>
                      </Content>
                     </Col>
-                    <Col flex="30%">
-                     {/* <img src={ require('../../img/data.PNG') } /> */}
+                    <Col flex="20%">
+                     <img src={ require('../../img/data.PNG') } width='420px' height='auto'/>
                      <Area>
                         Data Science and Data Fusion  
                      </Area>
@@ -135,7 +151,7 @@ const Wrapper = styled.div`
   background-color: white;
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
-  padding: 5% 2% 3% 7%;
+  padding: 3% 7% 3% 7%;
 `;
 
 const Title = styled.div`
@@ -143,30 +159,30 @@ const Title = styled.div`
   font-size: 3.8rem;
   font-weight: 600;
   text-align: center;
-  padding: 1.8% 0% 10% 0%;
+  padding: 2% 0% 10% 0%;
   border: 0px;
   color: black;
 
   p {
     font-size: 1.1rem;
+    font-weight: 200;
   }
 `;
 
 const Area = styled.div`
+  padding: 3% 0% 15% 0%;
   font-size: 1.5rem;
   text-align: center;
   color: darkgreen;
 `;
 
 const Content = styled.div`
-  padding: 0% 10% 5% 5%;
-  color: black;
-  font-size: 1.1rem;
-`;
+  font-size: 1rem;
+  padding: 0% 0% 0% 2%;
 
-// const BGImageContainer = styled.ImageBackground`
-//   width: 40px;
-//   height: 50%;
-// `;
+  p {
+    padding: 5% 0% 0% 0%;
+  }
+`;
 
 export default ResearchArea;
