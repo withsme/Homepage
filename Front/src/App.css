@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: LatoLight;
+  src: url(./font/LatoLight.woff);
+}
+
+@font-face {
+  font-family: LatoRegular;
+  src: url(./font/LatoRegular.woff);
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url(./font/LatoBold.woff);
+}

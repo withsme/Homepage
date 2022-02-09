@@ -70,7 +70,7 @@ function UndergraduateStudents() {
 };
 
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular'; 
   line-height: 1.5;
   padding: 5% 5% 3% 5%;
   font-size: 1.1rem;

@@ -116,7 +116,7 @@ function Projects() {
 };
 
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 5% 7% 3% 7%;
   font-size: 1.1rem;
@@ -135,9 +135,8 @@ const SubTitle = styled.div`
   height: 4.3rem;
   padding: 0% 1% 7% 3%;
   border: 0px;
-  color: darkgreen;
+  color: #174F2C;
   font-size: 1.7rem;
-  font-weight: 600;
 `;
 
 const Content = styled.div`

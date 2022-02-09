@@ -46,7 +46,7 @@ function Footer () {
                         style = {{
                             width:"240px", 
                             height:"240px",
-                            marginTop: "8px"
+                            marginTop: "11px"
                         }}
                     >
                     </div>
@@ -57,11 +57,10 @@ function Footer () {
 } 
 
 const Wrapper = styled.div`
-  height: 16rem;
+  height: 16.5rem;
   padding: 0% 2% 3% 12.5%;
-  color: white;
+  font-family: 'LatoRegular';
   background-color: gray;
-  font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
   margin-top: auto;
 

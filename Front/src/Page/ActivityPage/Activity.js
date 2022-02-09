@@ -25,9 +25,9 @@ function Activity() {
 };
 
 const Wrapper = styled.div`
+  font-family: 'LatoRegular';
   color: black;
   background-color: white;
-  font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
   padding: 2% 2% 3% 15%;
 `;

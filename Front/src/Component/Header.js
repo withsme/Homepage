@@ -63,10 +63,9 @@ function Header () {
 
 const Wrapper = styled.div`
   height: 3.5rem;
-  color: black;
-  background-color: white;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
+  font-weight: 100;
 `;
 
 const Logo = styled.button`

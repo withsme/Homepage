@@ -10,10 +10,10 @@ function System() {
             </Title>
             <Wrapper>
                 <Row justify="center">
-                    <Col flex="15%">
+                    <Col flex="25%">
                         <img src={ require('../../img/system1.jpg') } width='380px' height='auto'/>
                     </Col>
-                    <Col flex="60%">
+                    <Col flex="65%">
                         <SubTitle>
                             문자 광학 인식 기술 (Optical Character Recognition)
                         </SubTitle>
@@ -24,10 +24,10 @@ function System() {
                     </Col>
                 </Row>
                 <Row justify="center" style={{marginTop : "30px"}}>
-                    <Col flex="15%">
+                    <Col flex="25%">
                         <img src={ require('../../img/voice.jpg') } width='380px' height='auto'/>
                     </Col>
-                    <Col flex="60%">
+                    <Col flex="65%">
                         <SubTitle>
                             한국어 음성인식 엔진 (Korean Speech Recognition Engine)
                         </SubTitle>
@@ -40,10 +40,10 @@ function System() {
                     </Col>
                 </Row>
                 <Row justify="center" style={{marginTop : "30px"}}>
-                    <Col flex="15%">
+                    <Col flex="25%">
                         <img src={ require('../../img/crawling.jpg') } width='380px' height='auto'/>
                     </Col>
-                    <Col flex="60%">
+                    <Col flex="65%">
                         <SubTitle>                         
                             Commercial Crawling System 
                         </SubTitle>
@@ -58,19 +58,19 @@ function System() {
                     </Col>
                 </Row>
                 <Row justify="center" style={{marginTop : "30px"}}>
-                    <Col flex="15%">
+                    <Col flex="25%">
                         <img src={ require('../../img/system4.png') } width='390px' height='auto'/>
                     </Col>
-                    <Col flex="60%">
+                    <Col flex="65%">
                         <SubTitle>                         
                             NSCC (National Science & Technology Code Classifier) 
                         </SubTitle>
                         <Content>
                             ‒ (한국) 과학기술표준분류기반 문서 자동 분류기 [2020]
-                            <br/><extraContent>◦ 중분류 200개 기준, Top1: 75%, Top2: 85%</extraContent>
+                            <br/><Extra>◦ 중분류 200개 기준, Top1: 75%, Top2: 85%</Extra>
                             <br/>‒ (한국) 과학기술표준분류기반 문서 자동 분류기 [2021.11]
-                            <br/><extraContent>◦ 중분류 145개 기준, Top1: 78%, Top3: 90%</extraContent>
-                            <br/><extraContent>◦ KorSci-Electra 모델 개발 & Fine-tuning</extraContent>
+                            <br/><Extra>◦ 중분류 145개 기준, Top1: 78%, Top3: 90%</Extra>
+                            <br/><Extra>◦ KorSci-Electra 모델 개발 & Fine-tuning</Extra>
                         </Content>
                     </Col>
                 </Row>
@@ -80,7 +80,7 @@ function System() {
 };
 
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 5% 7% 3% 7%;
   font-size: 1.1rem;
@@ -96,7 +96,7 @@ const Title = styled.div`
 `;
 
 const SubTitle = styled.div`
-  padding: 2% 0% 4% 5%;
+  padding: 2% 0% 4% 10%;
   border: 0px;
   color: darkgreen;
   font-size: 1.2rem;
@@ -104,7 +104,7 @@ const SubTitle = styled.div`
 `;
 
 const Content = styled.div`
-  padding: 0% 10% 10% 5%;
+  padding: 0% 10% 10% 10%;
   color: black;
   font-size: 1rem;
 
@@ -114,7 +114,10 @@ const Content = styled.div`
   }
 `;
 
-const extraContent = styled.div`
+const Extra = styled.button`
+  border: 0px;
+  color: black;
+  background-color: white;
   padding: 0% 0% 0% 2%;
 `;
 

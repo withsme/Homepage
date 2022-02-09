@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /* Component */
@@ -10,7 +11,6 @@ import News from './Page/NewsPage/News';
 import Activity from './Page/ActivityPage/Activity';
 import ResearchArea from './Page/ResearchAreaPage/ResearchArea';
 import PI from './Page/PIPage/PI';
-import Students from './Page/StudentsPage/Students';
 import GraduateStudents from './Page/StudentsPage/GraduateStudents';
 import UndergraduateStudents from './Page/StudentsPage/UndergraduateStudents';
 import Alumni from './Page/StudentsPage/Alumni';
@@ -28,7 +28,6 @@ function App() {
         <Route path='/activity' element={<Activity />} />
         <Route path='/researchArea' element={<ResearchArea />} />
         <Route path='/pi' element={<PI />} />
-        <Route path='/students' element={<Students />} />
         <Route path='/graduateStudents' element={<GraduateStudents />} />
         <Route path='/undergraduateStudents' element={<UndergraduateStudents />} />
         <Route path='/alumni' element={<Alumni />} />

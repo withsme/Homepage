@@ -54,7 +54,7 @@ function Alumnui() {
 };
 
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 5% 7% 3% 7%;
   font-size: 1.1rem;

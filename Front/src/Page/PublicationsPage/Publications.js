@@ -12,7 +12,7 @@ function Publications() {
             </Title>
             <Wrapper>
                 <Collapse style={{ backgroundColor:"white"}}>
-                    <Panel header="International Journal Papers" style={{ fontSize:"25px", fontWeight: "bold"}}>
+                    <Panel header="International Journal Papers" style={{ fontSize:"25px"}}>
                         <Content>                            
                             <p/>[17] Layout-MetaBERT for Metadata Extraction from Scientific Articles (arxiv)
                             <p/>[16] Deokin Seo, Heung-Seon Oh and Yuchul Jung (2021), Wav2KWS: Transfer Learning from Speech Representations for Keyword Spotting, IEEE Access, [SCIE, Q1]
@@ -33,7 +33,7 @@ function Publications() {
                             <p/>[1] Hyunseok Kim, Yuchul Jung, and Yong K. Hwang (2005), Taxonomy of Atomic Actions for Home-Service Robots, Journal of Advanced Computational Intelligence and Intelligence Informatics (JACIII) 9(2), pp.114-120.
                         </Content>
                     </Panel>
-                    <Panel header="Domestic Journal Papers" style={{ fontSize:"25px", fontWeight: "bold" }}>
+                    <Panel header="Domestic Journal Papers" style={{ fontSize:"25px" }}>
                         <Content>
                             <p/>[11] Jun-Nyeong Jeong, Sang-Young Kim, Seong-Tae Kim, Jeong-Jae Lee, and Yuchul Jung, "A Study on Korean Language Honorific Translation using Transformers", 한국정보기술학회 논문지, Vol. 19, No. 12, pp. 143-150, (Dec. 2021)
                             <p/>[10] 정준녕, 김상영, 김성태, 이정재, 정유철, "어텐션기반 측면추출에 기반한 제품기류의 측면요약", 정보과학회 논문지, Vol. 48, No. 12, pp. 1318-1328, (Dec. 2021)
@@ -48,7 +48,7 @@ function Publications() {
                             <p/>[1] 정유철, 서동준, et al., 오픈 데이터 플랫폼 동향, 정보처리학회(정보처리학회지) 23권 5호 (2016), pp. 53-63 (Sep. 2016)
                         </Content>
                     </Panel>
-                    <Panel header="International Conference Papers" style={{ fontSize:"25px", fontWeight: "bold" }}>
+                    <Panel header="International Conference Papers" style={{ fontSize:"25px" }}>
                         <Content>                     
                             <p/>[15] Kyung-Min, Yuchul Jung, Sung-Hyon Myaeng, A Topic Transition Map for Query Expansion: A Semantic Analysis of Click-Through Data and Test Collections, Australasian Joint Conference on Artificial Intelligence, pp. 648-664, 2016 (2016.12.05)
                             <p/>[14] Heung-Seon Oh, Yuchul Jung, Kwang-Young Kim, A Multi-Stage Approach to Re-ranking Medical Documents, CLEF 2015, LNCS 9283, pp. 166-177, 2015.
@@ -67,7 +67,7 @@ function Publications() {
                             <p/>[1] Yuchul Jung, Yong K. Hwang, and Manjai Lee, Case-Based Reasoning Approach to Task Planning of Home-Service Robots, The 14th Int. Conf. on Artificial Reality and Telexistence, Seoul, Korea, Nov. 2004.
                         </Content>
                     </Panel>
-                    <Panel header="International Workshop Papers" style={{ fontSize:"25px", fontWeight: "bold" }}>
+                    <Panel header="International Workshop Papers" style={{ fontSize:"25px" }}>
                         <Content>
                             <p/>[11] Hyuntae Kim, Soyoung Park, Seongeun Yang, Yuchul Jung, CILAB@FinTOC-2021 Shared Task: Title Detection and Table of Content Extraction for Financial Document, Proc. of the 3rd Financial Narrative Processing Workshop, Sep. 2021.
                             <p/>[10] Yeonsoo Lim, Daehyeon Bong, Yuchul Jung, A Study on Automatic Keyphrase Extraction and Its Refinement for Scientific ARticles, DSKG workshop in ICWE'19, pp. 18-21, 2019
@@ -82,7 +82,7 @@ function Publications() {
                             <p/>[1] Youngho Kim, Yuchul Jung, and Sung-Hyon Myaeng, Identifying Opinion Holders in Opinion text from Online Newspapers, IEEE Granular Computing (Grc-07), pp. 699-702, 2007.
                         </Content>
                     </Panel>
-                    <Panel header="Domestic Conference Papers" style={{ fontSize:"25px", fontWeight: "bold" }}>
+                    <Panel header="Domestic Conference Papers" style={{ fontSize:"25px" }}>
                         <Content>
                             <p/>[11] 박성환,  정유철, 얼굴마스크 탐지 구현 (An Implementation of Face Mask Detection), 2021년 한국컴퓨터정보학회 동계학술대회  (2021.01)
                             <p/>[10] 김용우, 전성배,  정유철, 유튜브 메타정보를 이용한 자동 주제 분류 고찰 (An Analysis of Automatic Topic Classification using Youtube Meta Information), 2021년 한국컴퓨터정보학회 동계학술대회  (2021.01)
@@ -97,7 +97,7 @@ function Publications() {
                             <p/>[1] 서덕진, 김영우, 정유철, 한글 초록 문장 태깅을 위한 BRAT의 확장 구현(An Extension of BRAT for Automatic Sentence Tagging in Korean Research Articles), HCI KOREA 2019 (2019.02)
                         </Content>
                     </Panel>
-                    <Panel header="Registered Patents / Patent Application" style={{ fontSize:"25px", fontWeight: "bold" }}>
+                    <Panel header="Registered Patents / Patent Application" style={{ fontSize:"25px" }}>
                         <Content>
                             <p/>[12] 정유철, 김현태, 김종운 "분산 웹 크롤링 방법, 분산 웹 크롤링 시스템, 이를 위한 컴퓨터 프로그램" (출원: 10-2020-0185944, 등록: 1022317620000) (등록, 2021.03.18)
                             <p/>[11] 김종운, 정유철, 최종윤 "정책정보 문서의 요지 정보 제공 방법, 정책정보 제공 시스템, 이를 위한 컴퓨터 프로그램" (출원: 10-2020-0037727, 등록: 1021583520000) (등록, 2020.09.15)
@@ -115,7 +115,7 @@ function Publications() {
                             <p/>정유철, 이상민, 권혁찬, 전석환, 권기훈 "무선 리모콘 장치 및 그를 이용하는 방법" (10-2020-0172740) (출원, 2020.12.10)                        
                         </Content>
                     </Panel>
-                    <Panel header="Book" style={{ fontSize:"25px", fontWeight: "bold" }}>
+                    <Panel header="Book" style={{ fontSize:"25px" }}>
                         <Content>
                             <p/>Sung-Hyon Myaeng, Yoonjae Jeong, and Yuchul Jung, Experiential Knowledge Mining, Foundations and Trends® in Web Science, Vol. 4, Issue 1, pp. 1-102. (15 Aug. 2013) 
                         </Content>
@@ -126,9 +126,9 @@ function Publications() {
     );
 };
 
+
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 1.5;
+  font-family: 'LatoRegular';
   padding: 4% 5% 3% 5%;
   font-size: 1rem;
 `;
@@ -139,7 +139,7 @@ const Title = styled.div`
   font-weight: 600;
   text-align: center;
   padding: 1.8% 0% 10% 0%;
-  border: 0px;
+  bolder: 0px;
 `;
 
 const Content = styled.div`
@@ -148,3 +148,4 @@ const Content = styled.div`
 `;
 
 export default Publications;
+                          

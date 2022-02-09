@@ -78,9 +78,7 @@ function Home() {
 }
 
 const Wrapper = styled.div`
-  color: black;
-  background-color: white;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 2% 2% 3% 15%;
 
@@ -103,9 +101,9 @@ const Emp = styled.button`
 `;
 
 const Title = styled.div`
-  height: 4.3rem;
-  padding: 1% 1% 1% 15%;
-  background-color: lightgray;
+  height: 6rem; 
+  padding: 2% 1% 1% 15%;
+  background-color: #F2F3F4;
   border: 0px;
   font-size: 1.5rem;
   font-weight: 600;

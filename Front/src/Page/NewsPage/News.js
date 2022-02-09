@@ -22,9 +22,7 @@ function News() {
 };
 
 const Wrapper = styled.div`
-  color: black;
-  background-color: white;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 2% 2% 3% 15%;
 `;
@@ -36,7 +34,6 @@ const Title = styled.div`
   text-align: center;
   padding: 1.8% 0% 2% 0%;
   border: 0px;
-  color: black;
 `;
 
 const Button = styled.button`

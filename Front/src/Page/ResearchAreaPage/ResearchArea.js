@@ -112,9 +112,8 @@ function ResearchArea() {
                                 <li>Development of AI-based Applications</li>
                                 <li>Transfer Learning</li>
                                 <li>Deep Learning Optimization on Neuromorphic Chips.</li>
-                                <li>Korean Speech Recognition on the Edge</li>
-                                <li>◦ Semi-automatic speech data construction</li>
-                                <li>Face Recognition</li>
+                                ◦ Korean Speech Recognition on the Edge ‣ Semi-automatic speech data construction
+                                <br/> ◦ Face Recognition
                             </ul>
                         </p>
                      </Content>
@@ -147,9 +146,7 @@ function ResearchArea() {
 };
 
 const Wrapper = styled.div`
-  color: black;
-  background-color: white;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 3% 7% 3% 7%;
 `;
@@ -159,13 +156,11 @@ const Title = styled.div`
   font-size: 3.8rem;
   font-weight: 600;
   text-align: center;
-  padding: 2% 0% 10% 0%;
+  padding: 2% 0% 12% 0%;
   border: 0px;
-  color: black;
 
   p {
     font-size: 1.1rem;
-    font-weight: 200;
   }
 `;
 

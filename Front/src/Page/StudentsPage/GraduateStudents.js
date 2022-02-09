@@ -52,7 +52,7 @@ function GraduateStudents() {
 };
 
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 5% 5% 3% 5%;
   font-size: 1.1rem;
@@ -75,7 +75,6 @@ const Name = styled.div`
 
 const Content = styled.div`
   padding: 3% 10% 5% 5%;
-  color: black;
   font-size: 1rem;
 `;
 

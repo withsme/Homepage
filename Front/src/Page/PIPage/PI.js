@@ -10,11 +10,11 @@ function PI() {
             </Title>
             <Wrapper>
                 <Row justify="center">
-                    <Col flex ="35%">
+                    <Col flex ="30%">
                         <img src={ require('../../img/pi.jpg') } width='400px' height='auto'/>
                     </Col>
-                    <Col flex ="35%">
-                        Assistant Prof.   <Emp>Yuchul Jung</Emp>
+                    <Col flex ="35%" style={{ marginTop:"90px", marginLeft:"160px",}}>
+                        Assistant Prof.   <Name>Yuchul Jung</Name>
                     </Col>
                 </Row>
             </Wrapper>
@@ -24,10 +24,10 @@ function PI() {
             <Wrapper>
                 <Content>
                     <Emp>「 2011 Ph.D.」</Emp> Department of Computer Science, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea
-                    <p>‣ Dissertation : An Activity Knowledge Base from Multiple Resources: Construction and Utilizations</p>
+                    <br/><Extra>‣ Dissertation : An Activity Knowledge Base from Multiple Resources: Construction and Utilizations</Extra>
                     <p>‣ Advisor : Dr. Sung-Hyon Myaeng</p>
                     <Emp>「 2005  M.S.」</Emp> Digital Media, Department of Information and Communications, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea
-                    <p>‣ Dissertation : Case-Based Reasoning Approach to Task Planning of Home-Service Robots</p>
+                    <br/><Extra>‣ Dissertation : Case-Based Reasoning Approach to Task Planning of Home-Service Robots</Extra>
                     <p>‣ Advisor : Dr. Yong. K Hwang</p>
                     <Emp>「 2003 B.S. 」</Emp> Department of Information and Communications, Ajou Univ., Suwon, Korea
                 </Content>
@@ -38,8 +38,8 @@ function PI() {
             <Wrapper>
                 <Content>
                     <Emp>「 2018.03 ~ Current 」</Emp>
-                    <p> 공공데이터전략위원회, 데이터관리체계 전문위원 </p>
-                    <p>  한국데이터사이언스 학회 이사 </p>
+                    <br/><Extra> 공공데이터전략위원회, 데이터관리체계 전문위원 </Extra>
+                    <p> 한국데이터사이언스 학회 이사</p>
                     <Emp>「 2017.08 ~ Current 」</Emp>
                     <p>Assistant Professor, Department of Computer Engineering, Kumoh National Institute of Technology (KIT)</p>
                     <Emp>「 2017.01 ~ 2017.08 」</Emp>
@@ -55,7 +55,7 @@ function PI() {
 };
 
 const Wrapper = styled.div`
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'LatoRegular';
   line-height: 1.5;
   padding: 5% 2% 3% 7%;
   font-size: 1rem;
@@ -66,16 +66,16 @@ const Title = styled.div`
   font-size: 3.8rem;
   font-weight: 600;
   text-align: center;
-  padding: 1.8% 0% 10% 0%;
+  padding: 2% 0% 8% 0%;
   border: 0px;
 `;
 
 const SubTitle = styled.div`
-  height: 4.3rem;
-  padding: 1% 1% 1% 15%;
-  background-color: lightgray;
+  height: 6rem;
+  padding: 2% 1% 1% 15%;
+  background-color: #F2F3F4;
   border: 0px;
-  color: darkgreen;
+  color: #174F2C;
   font-size: 1.5rem;
   font-weight: 600;
 `;
@@ -85,13 +85,28 @@ const Emp = styled.button`
   border: 0px;
   color: black;
   background-color: white;
-  padding: 0.5% 0.5% 0% 0%;
+  padding: 0.5% 0.5% 0.6% 0%;
   font-size: 1.15rem;
+`;
+
+const Name = styled.button`
+  border: 0px;
+  color: black;
+  background-color: white;
+  padding: 0% 0% 0% 1.5%;
+  font-size: 3rem;
+`;
+
+const Extra = styled.button`
+  border: 0px;
+  color: black;
+  background-color: white;
+  padding: 1% 0% 0% 3%;
+  font-size: 1.1rem;
 `;
 
 const Content = styled.div`
   padding: 0% 10% 5% 5%;
-  color: black;
 
   p {
     padding: 0.5% 0% 0% 3%;
