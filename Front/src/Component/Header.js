@@ -63,7 +63,7 @@ function Header () {
 
 const Wrapper = styled.div`
   height: 3.5rem;
-  font-family: 'LatoRegular';
+  font-family: 'LatoLight';
   line-height: 1.5;
   font-weight: 100;
 `;

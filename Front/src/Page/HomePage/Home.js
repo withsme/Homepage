@@ -102,7 +102,7 @@ const Emp = styled.button`
 
 const Title = styled.div`
   height: 6rem; 
-  padding: 2% 1% 1% 15%;
+  padding: 1.5% 1% 1% 15%;
   background-color: #F2F3F4;
   border: 0px;
   font-size: 1.5rem;
