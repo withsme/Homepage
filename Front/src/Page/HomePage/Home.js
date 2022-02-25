@@ -128,4 +128,9 @@ const Button = styled.button`
   margin-left : auto;
 `;
 
+{/* https://velog.io/@kyungjune/react-typescript%EB%A1%9C-%EC%BA%90%EB%9F%AC%EC%85%80-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0
+
+https://velog.io/@jemizem/React-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
+*/}
+
 export default Home;

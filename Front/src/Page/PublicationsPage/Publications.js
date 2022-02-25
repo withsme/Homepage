@@ -6,8 +6,11 @@ import axios from 'axios';
 const { Panel } = Collapse;
 
 function Publications() {
-
-    //process.env.REACT_APP_BACKEND +
+    useEffect(() => {
+        axios.get('/publication')
+            .then((res)=>console.log ( res.data ) )
+            .catch((Error)=>{console.log(Error)})
+    }, [] )
 
     return (
         <>
