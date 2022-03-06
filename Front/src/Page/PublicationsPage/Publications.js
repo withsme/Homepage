@@ -6,19 +6,19 @@ import axios from 'axios';
 const { Panel } = Collapse;
 
 function Publications() {
-    useEffect(() => {
-        axios.get('/publication')
-            .then((res)=>console.log ( res.data ) )
-            .catch((Error)=>{console.log(Error)})
-    }, [] )
-
+    // useEffect(() => {
+    //     axios.get('/publication')
+    //         .then((res)=>console.log ("성공!!!!!!!" + res.data ) )
+    //         .catch((Error)=>{console.log(Error)})
+    // }, [] )
+    
     return (
         <>
             <Title>
                 Publications
             </Title>
             <Wrapper>
-                <Collapse style={{ backgroundColor:"white"}}>
+                <Collapse style={{ backgroundColor:"white"}} bordered={false} >
                     <Panel header="International Journal Papers" style={{ fontSize:"25px"}}>
                         <Content>                            
                             <p/>[17] Layout-MetaBERT for Metadata Extraction from Scientific Articles (arxiv)

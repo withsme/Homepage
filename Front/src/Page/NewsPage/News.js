@@ -1,30 +1,45 @@
 import React from 'react';
 import styled from "styled-components";
-import { Row, Col } from 'antd';
+import { Row, Col, List, Pagination } from 'antd';
 
 function News() {
-    return (
-        <>
-            <Title>News</Title>
-            <Wrapper>
-                <Row>
-                    <Col flex="30%">
-                     사진
-                    </Col>
-                    <Col flex="70%">
-                     설명
-                    </Col>
-                </Row>
-                <Button>Read more News</Button>
-            </Wrapper>
-        </>
-    );
+  const listData = [];
+  for (let i = 0; i < 6; i++) {
+    listData.push({
+      title: `title ${i}`,
+      content:
+        'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+    });
+  }
+
+  return (
+    <>
+      <Title>News</Title>
+      <Wrapper>
+      <List
+        itemLayout="vertical"
+        size="large"
+        pagination={{ pageSize: 5 }}
+        dataSource={listData}
+        renderItem={(item) => (
+          <List.Item
+            key={item.title}
+            extra={ <img src={ require('../../img/information.PNG') } width='330px' height='auto'/> }
+          >
+            <List.Item.Meta title={item.title}/>
+              {item.content}
+          </List.Item>
+        )}
+        />
+      </Wrapper>
+    </>
+  );
 };
 
 const Wrapper = styled.div`
   font-family: 'LatoRegular';
   line-height: 1.5;
-  padding: 2% 2% 3% 15%;
+  padding: 2% 5% 3% 5%;
 `;
 
 const Title = styled.div`
@@ -36,13 +51,5 @@ const Title = styled.div`
   border: 0px;
 `;
 
-const Button = styled.button`
-  font-size: 1.2rem;
-  padding: 3% 0% 0% 36.8%;
-  color: black;
-  background-color: white;
-  border: 0px;
-  margin-left : auto;
-`;
 
 export default News;

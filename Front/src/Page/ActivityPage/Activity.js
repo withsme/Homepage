@@ -1,27 +1,77 @@
 import React from 'react';
 import styled from "styled-components";
-import { Row, Col } from 'antd';
+import { Row, Col, List, Card } from 'antd';
+const { Meta } = Card;
+
+const listData = [];
+for (let i = 0; i < 3; i++) {
+  listData.push({
+    title:
+      <Row justify='center'>
+        <Col flex="25%" style={{ width: '310px', marginRight: '50px'}}>
+          <Card
+            bordered={false}
+            style={{ width: '390px'}}
+            cover={<img src={ require('../../img/robot.PNG')} />}
+          >
+            <Meta 
+              title="체육대회" 
+              description="일자 : 2021.06.19" 
+              style={{ textAlign:'center' }}
+            />
+          </Card>
+        </Col>
+        <Col flex="25%" style={{ width: '310px', marginRight: '50px' }}>
+          <Card
+            bordered={false}
+            style={{ width: '320px'}}
+            cover={<img src={ require('../../img/information.PNG')}/> }
+            >
+              <Meta 
+                title="세미나" 
+                description="일자 : 2022.01.25" 
+                style={{ textAlign:'center' }}
+              />
+            </Card>
+          </Col>
+          <Col flex="25%" style={{ width: '310px'}}>
+          <Card
+            bordered={false}
+            style={{ width: '345px'}}
+            cover={<img src={ require('../../img/service.jpg')}/> }
+          >
+            <Meta 
+              title="MT" 
+              description="일자 : 2021.11.05" 
+              style={{ textAlign:'center' }}
+            />
+          </Card>
+        </Col>
+      </Row>
+    ,
+  });
+}
 
 function Activity() {
-    return (
-        <>
-            <Title>Activity</Title>
-            <Wrapper>
-                <Row>
-                    <Col flex="33%">
-                     사진
-                    </Col>
-                    <Col flex="33%">
-                     사진
-                    </Col>
-                    <Col flex="33%">
-                     사진
-                    </Col>
-                </Row>
-                <Button>Read more Activity</Button>
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <Title>Activity</Title>
+      <Wrapper>
+        <List
+          itemLayout="vertical"
+          size="large"
+          ghost
+          pagination={{ pageSize: 3 }}
+          dataSource={listData}
+          renderItem={(item) => (
+            <List.Item>
+              <List.Item.Meta title={item.title}/>
+            </List.Item>
+          )}
+        />
+      </Wrapper>
+    </>
+  );
 };
 
 const Wrapper = styled.div`
@@ -29,7 +79,7 @@ const Wrapper = styled.div`
   color: black;
   background-color: white;
   line-height: 1.5;
-  padding: 2% 2% 3% 15%;
+  padding: 2% 10% 3% 10%;
 `;
 
 const Title = styled.div`
@@ -40,15 +90,6 @@ const Title = styled.div`
   padding: 1.8% 0% 2% 0%;
   border: 0px;
   color: black;
-`;
-
-const Button = styled.button`
-  font-size: 1.2rem;
-  padding: 3% 0% 0% 36%;
-  color: black;
-  background-color: white;
-  border: 0px;
-  margin-left : auto;
 `;
 
 export default Activity;

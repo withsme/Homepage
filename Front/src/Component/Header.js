@@ -1,8 +1,7 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { Menu, Dropdown } from 'antd';
+import { Menu, Dropdown, Row, Col } from 'antd';
 import styled from "styled-components";
 import { DownOutlined } from '@ant-design/icons';
 
@@ -34,29 +33,36 @@ function Header () {
   
   return (
     <Wrapper>
-      <Logo>CI Lab @ KIT</Logo>
-      <Link to = '/'> <Button>Home</Button> </Link>
-      <Link to = '/news'> <Button>News</Button> </Link>
-      <Link to = '/activity'><Button>Activity</Button> </Link>
-      <Link to = '/researchArea'><Button>Research Area</Button> </Link>
-      <Link to = '/pi'><Button>PI</Button> </Link>
-      <Dropdown overlay={studentsMenu} trigger={['click']}>
-        <a 
-          onClick={e => e.preventDefault()}
-          style={{ color: "black", marginLeft: "20px", fontSize: "16px"}}
-        >
-          Students <DownOutlined />
-        </a>
-      </Dropdown>
-      <Dropdown overlay={projectsMenu} trigger={['click']}>
-        <a 
-          onClick={e => e.preventDefault()}
-          style={{ color: "black", marginLeft: "21px", fontSize: "16px"}}
-        >
-          Projects <DownOutlined />
-        </a>
-      </Dropdown>
-      <Link to = '/publications'><Button>Publications</Button> </Link>
+      <Row>
+        <Col flex="20%">
+          <Logo>CI Lab @ KIT</Logo>
+        </Col>
+        <Col flex="80%" style={{ textAlign: 'right', marginTop: '5px'}}>  
+          <Link to = '/'> <Button>Home</Button> </Link>
+          <Link to = '/news'> <Button>News</Button> </Link>
+          <Link to = '/seminar'><Button>Seminar</Button> </Link>
+          <Link to = '/activity'><Button>Activity</Button> </Link>
+          <Link to = '/researchArea'><Button>Research Area</Button> </Link>
+          <Link to = '/pi'><Button>PI</Button> </Link>
+          <Dropdown overlay={studentsMenu} trigger={['click']}>
+            <a 
+              onClick={e => e.preventDefault()}
+              style={{ color: "black", marginLeft: "15px", fontSize: "16px"}}
+            >
+              Students <DownOutlined />
+            </a>
+          </Dropdown>
+          <Dropdown overlay={projectsMenu} trigger={['click']}>
+            <a 
+              onClick={e => e.preventDefault()}
+              style={{ color: "black", marginLeft: "25px", marginRight: "15px", fontSize: "16px"}}
+            >
+              Projects <DownOutlined />
+            </a>
+          </Dropdown>
+          <Link to = '/publications'><Button style={{ marginRight: "20px"}}>Publications</Button></Link>
+        </Col>   
+      </Row>
     </Wrapper>
   );
 } 
@@ -77,7 +83,7 @@ const Logo = styled.button`
 
 const Button = styled.button`
   font-size: 1rem;
-  padding: 0% 0% 0% 1.2%;
+  padding: 0% 1.2% 0% 1.2%;
   color: black;
   background-color: white;
   border: 0px;

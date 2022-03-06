@@ -8,6 +8,7 @@ import Header from './Component/Header';
 /* Page */
 import Home from './Page/HomePage/Home';
 import News from './Page/NewsPage/News';
+import Seminar from './Page/SeminarPage/Seminar';
 import Activity from './Page/ActivityPage/Activity';
 import ResearchArea from './Page/ResearchAreaPage/ResearchArea';
 import PI from './Page/PIPage/PI';
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/news' element={<News />} />
+        <Route path='/seminar' element={<Seminar />} />
         <Route path='/activity' element={<Activity />} />
         <Route path='/researchArea' element={<ResearchArea />} />
         <Route path='/pi' element={<PI />} />

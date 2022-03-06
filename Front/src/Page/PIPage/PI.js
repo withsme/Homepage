@@ -57,7 +57,7 @@ function PI() {
 const Wrapper = styled.div`
   font-family: 'LatoRegular';
   line-height: 1.5;
-  padding: 5% 2% 3% 7%;
+  padding: 3% 5% 3% 5%;
   font-size: 1rem;
 `;
 
