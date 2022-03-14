@@ -11,7 +11,7 @@ function System() {
             <Wrapper>
                 <Row justify="center">
                     <Col flex="25%">
-                        <img src={ require('../../img/system1.jpg') } width='380px' height='auto'/>
+                        <img src={ require('../../img/system1.jpg') } width='340px' height='auto'/>
                     </Col>
                     <Col flex="65%">
                         <SubTitle>
@@ -25,7 +25,7 @@ function System() {
                 </Row>
                 <Row justify="center" style={{marginTop : "30px"}}>
                     <Col flex="25%">
-                        <img src={ require('../../img/voice.jpg') } width='380px' height='auto'/>
+                        <img src={ require('../../img/voice.jpg') } width='340px' height='auto'/>
                     </Col>
                     <Col flex="65%">
                         <SubTitle>
@@ -41,7 +41,7 @@ function System() {
                 </Row>
                 <Row justify="center" style={{marginTop : "30px"}}>
                     <Col flex="25%">
-                        <img src={ require('../../img/crawling.jpg') } width='380px' height='auto'/>
+                        <img src={ require('../../img/crawling.jpg') } width='340px' height='auto'/>
                     </Col>
                     <Col flex="65%">
                         <SubTitle>                         
@@ -59,7 +59,7 @@ function System() {
                 </Row>
                 <Row justify="center" style={{marginTop : "30px"}}>
                     <Col flex="25%">
-                        <img src={ require('../../img/system4.png') } width='390px' height='auto'/>
+                        <img src={ require('../../img/system4.png') } width='360px' height='auto'/>
                     </Col>
                     <Col flex="65%">
                         <SubTitle>                         

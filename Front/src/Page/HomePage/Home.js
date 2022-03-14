@@ -3,20 +3,55 @@ import styled from "styled-components";
 import { Row, Col, List, Carousel } from 'antd';
 import ActivitySlide from './Slide/ActivitySlide';
 import Footer from '../../Component/Footer';
+import {parseString} from 'xml2js';
 
-// const request = require('request');
-// var parseString = require('xml2js').parseString;
+// 모듈 로드npm
+// var url = "https://techneedle.com/archives/category/default/ai";
 
-// request('https://techneedle.com/archives/category/default/ai'), function(error, response, body) {
-//   parseString(body, function(err, result) {
-//     var parsedData = result;
+// // var parseString = require('xml2js').parseString;
+// // var request = require('request');
 
-//     console.log(parsedData);
+// fetch(url) 
+//   .then((response) => response.text()) 
+//   .then((responseText) => { 
+//     parseString(responseText, (err, result) => {
+//       if (err !== null) {
+//          console.log('Fail get data.'); 
+//       } else { 
+//         console.log(result); 
+//       } 
+//     }); 
 //   }) 
-// }
+//   .catch((error) => {
+//     console.log('Error fetching the feed: ', error); 
+// });
 
-// Image
-import img1 from "../../img/service.jpg";
+
+// // RSS 다운로드 ---- (※1)
+// request(RSS, function (err, response, body) {
+//   if (!err && response.statusCode == 200) {
+//     analyzeRSS(body);
+//   }
+// });
+
+// RSS 해석 ---- (※2)
+// function analyzeRSS(xml) {
+//     // XML을 JS 오브젝트로 변환
+//     parseString(xml, function (err, obj) {
+//         if (err) {
+//             console.log(err);
+//             return;
+//         }
+//         // 기상 예보 정보 출력 ----- (※3)
+//         console.log(JSON.stringify(obj)); // ----- (※4)
+//         // var datas = obj.rss.channel[0].item[0].description[0].body[0].location[0].data;
+//         // var city = obj.rss.channel[0].item[0].description[0].body[0].location[0].city;
+//         // for (var i in datas) {
+//         //     var data = datas[i];
+//         //     console.log(city + " " + data.tmEf + " " + data.wf + " " + data.tmn + "~" + data.tmx);
+//         // }
+//     });
+// }
 
 const data = [
   { title: 'Layout-MetaBERT for Metadata Extraction from Scientific Articles (arxiv)' },
@@ -55,7 +90,7 @@ function Home() {
     <>
       <Wrapper>
         <Row justify="center">
-          <Col flex="45%" style={{ marginTop: '50px' }}>
+          <Col flex="45%" style={{ marginTop: '20px', marginLeft: '30px' }}>
             <Logo>
               <Emp>C</Emp>ognitive   
               <Emp>I</Emp>ntelligence  
@@ -71,18 +106,18 @@ function Home() {
               Kumoh National Institute of Technology (KIT), Gumi, South Korea
             </Content>
           </Col>
-          <Col flex="38%" style={{width: '180px', marginLeft: '40px',}}>
+          <Col flex="40%" style={{width: '150px', marginLeft: '80px'}}>
             <Carousel autoplay>
-              <img src={ require('../../img/information.PNG') } width='180px' height='350px' />
-              <img src={ require('../../img/robot.PNG') } width='180px' height='350px'/>
-              <img src={ require('../../img/service.jpg') } width='180px' height='350px'/>
-              <img src={ require('../../img/community.jpg') } width='180px' height='350px'/>
-              <img src={ require('../../img/AI.PNG') } width='180px' height='350px'/>
-              <img src={ require('../../img/data.PNG') } width='180px' height='350px'/>
+              <img src={ require('../../img/infor_sub.png') } width='150px' height='300px' />
+              <img src={ require('../../img/robot_sub.png') } width='150px' height='300px'/>
+              <img src={ require('../../img/service_sub.png') } width='150px' height='300px'/>
+              <img src={ require('../../img/heal_sub.png') } width='150px' height='300px'/>
+              <img src={ require('../../img/ai_sub.png') } width='150px' height='300px'/>
+              <img src={ require('../../img/data_sub.png') } width='150px' height='300px'/>
             </Carousel>
           </Col>
         </Row>
-      </Wrapper>
+      </Wrapper> 
       <Title>
         Our News
       </Title>
@@ -125,17 +160,17 @@ function Home() {
       </Title>
       <Wrapper>
         <Row justify="center">
-          <Col flex='3%' style={{ width: '20px', marginTop: '170px'}}>
+          <Col flex='3%' style={{ width: '10px', marginTop: '120px'}}>
             <SliderButton onClick={PrevSlide}> ◀ </SliderButton>
           </Col>
-          <Col flex='85%' style={{ width: '75rem'}} >
+          <Col flex='70%' style={{ width: '52rem'}} >
             <SliderRowContainer>
               <SliderContainer ref={slideRef}>
                 <ActivitySlide/>
               </SliderContainer>
             </SliderRowContainer>
           </Col>
-          <Col flex='3%' style={{ width: '20px', marginLeft: '45px', marginTop: '170px'}}>
+          <Col flex='3%' style={{ width: '10px', marginLeft: '45px', marginTop: '120px'}}>
             <SliderButton onClick={NextSlide}> ▶ </SliderButton>
           </Col>
         </Row>

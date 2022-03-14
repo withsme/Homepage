@@ -14,7 +14,7 @@ function Projects() {
                 </SubTitle>
                 <Row justify="center"  style={{marginTop : "10px"}}>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -23,7 +23,7 @@ function Projects() {
                         </Content>
                     </Col>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -34,7 +34,7 @@ function Projects() {
                 </Row>
                 <Row justify="center"  style={{marginTop : "10px"}}>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -52,7 +52,7 @@ function Projects() {
                 </SubTitle>
                 <Row justify="center"  style={{marginTop : "10px"}}>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -61,7 +61,7 @@ function Projects() {
                         </Content>
                     </Col>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -72,7 +72,7 @@ function Projects() {
                 </Row>
                 <Row justify="center"  style={{marginTop : "10px"}}>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -81,7 +81,7 @@ function Projects() {
                         </Content>
                     </Col>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -92,7 +92,7 @@ function Projects() {
                 </Row>
                 <Row justify="center"  style={{marginTop : "10px"}}>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
@@ -101,7 +101,7 @@ function Projects() {
                         </Content>
                     </Col>
                     <Col flex="23%">
-                        사진
+                        
                     </Col>
                     <Col flex="23%">
                         <Content>
