@@ -11,8 +11,8 @@ const columns = [
   { title: 'Source', width: 80, dataIndex: 'source', key: 'source' },
   { title: 'Year', width: 80, dataIndex: 'year', key: 'year' },
   { title: 'Area', width: 80, dataIndex: 'area', key: 'area' },
-  { title: 'Paper', width: 80, dataIndex: 'paper', key: 'paper', render: link => <a href='https://arxiv.org/abs/2109.08585'>{link}</a> },
-  { title: 'Slides', width: 80, dataIndex: 'slides', key: 'slides', render: link => <a href='https://arxiv.org/abs/2109.08585'>{link}</a> },
+  { title: 'Paper', width: 80, dataIndex: 'paper', key: 'paper', render: link => <a href='https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=A+Hybrid+BERT+Model+That+Incorporates&btnG='>{link}</a> },
+  { title: 'Slides', width: 80, dataIndex: 'slides', key: 'slides', render: link => <a href='https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=A+Hybrid+BERT+Model+That+Incorporates&btnG='>{link}</a> },
 ];
 
 function Seminar() {
