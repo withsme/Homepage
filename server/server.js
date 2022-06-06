@@ -12,7 +12,6 @@ app.use(express.json());
 var cors = require('cors')
 app.use(cors());
 
-app.use('/api', router);
 app.use('/activity', activityRouter);
 app.use('/seminar', seminarRouter);
 app.use('/publication', publicationRouter);

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const xlsx = require( "xlsx" );
 
-const usePath = '/Users/shinseungmi/home/pagediv/frontend/src/Use';
+const usePath = 'C:/home/Homepage/frontend/src/Use';
 const excelFile = xlsx.readFile(usePath + '/publicationUse/publication.xlsx');
 
 router.get('/', (req, res)=>{

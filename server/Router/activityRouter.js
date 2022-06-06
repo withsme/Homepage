@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require("fs"); 
 
 // const path = require("path"); // 쓸 줄 모름
-const usePath = '/Users/shinseungmi/home/pagediv/frontend/src/img';
+const usePath = 'C:/home/Homepage/frontend/src/img';
 
 router.get('/', (req, res)=>{
     var dir = fs.readdirSync(usePath + "/activityImg"); // 디렉토리를 읽어온다
@@ -25,7 +25,7 @@ router.get('/', (req, res)=>{
         itemEnt.path = filePath;
 
         // 파일 생성 날짜
-        var fileInfo = fs.statSync(usePath + "/activityImg/" + file) 
+        var fileInfo = fs.statSync(usePath + "/activityImg/" + file);
         var date = (JSON.stringify(fileInfo.birthtime)).substr(1, 10); // 날짜만 추출
         itemEnt.date = date.replaceAll('-', '.');
         
