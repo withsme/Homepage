@@ -21,7 +21,7 @@ router.get('/', (req, res)=>{
         itemEnt.name = fileName;
 
         // 파일 경로
-        var filePath = "./activityImg/" + dir[i];
+        var filePath = dir[i];
         itemEnt.path = filePath;
 
         // 파일 생성 날짜

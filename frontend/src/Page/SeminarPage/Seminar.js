@@ -3,18 +3,6 @@ import styled from "styled-components";
 import axios from "axios";
 import { Table } from 'antd';
 
-// const link = <a href='https://arxiv.org/abs/2109.08585'/>
-const columns = [
-  { title: 'Date', width: 80, dataIndex: 'date', key: 'date' },
-  { title: 'Speaker', width: 80, dataIndex: 'speaker', key: 'speaker' },
-  { title: 'Title', width: 200, dataIndex: 'title', key: 'title' },
-  { title: 'Source', width: 80, dataIndex: 'source', key: 'source' },
-  { title: 'Year', width: 80, dataIndex: 'year', key: 'year' },
-  { title: 'Area', width: 80, dataIndex: 'area', key: 'area' },
-  { title: 'Paper', width: 80, dataIndex: 'paper', key: 'paper', render: link => <a href='https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=A+Hybrid+BERT+Model+That+Incorporates&btnG='>{link}</a> },
-  { title: 'Slides', width: 80, dataIndex: 'slides', key: 'slides', render: link => <a href='https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=A+Hybrid+BERT+Model+That+Incorporates&btnG='>{link}</a> },
-];
-
 function Seminar() {
   const [seminarInfo, setSeminarInfo] = useState('');
 
@@ -24,6 +12,18 @@ function Seminar() {
       console.log(res.data);
     });
   };
+
+  const columns = [
+    { title: 'Date', width: 80, dataIndex: 'date', key: 'date' },
+    { title: 'Speaker', width: 80, dataIndex: 'speaker', key: 'speaker' },
+    { title: 'Title', width: 200, dataIndex: 'title', key: 'title' },
+    { title: 'Source', width: 80, dataIndex: 'source', key: 'source' },
+    { title: 'Year', width: 80, dataIndex: 'year', key: 'year' },
+    { title: 'Area', width: 80, dataIndex: 'area', key: 'area' },
+    { title: 'Paper', width: 80, dataIndex: 'paper', key: 'paper', render: (value) => <a href='paper'>[link]</a> },
+    { title: 'Slides', width: 80, dataIndex: 'slides', key: 'slides' , render: (value) => <a href=''>[link]</a> },
+  ];
+  
 
   useEffect(() => {
     seminarInfoApi();

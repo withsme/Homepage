@@ -38,7 +38,7 @@ function Activity() {
                   bordered={false}
                   style={{ width: '390px'}}
                   cover={// <img src={require(item.path)}/>
-                    <img src={item.path}/>
+                    <img src={require(`../../img/activityImg/${item.path}`)}/>
                   }
                 >
                   <Meta 
