@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { Row, Col, List, Pagination } from 'antd';
 import axios from "axios";
+import 'antd/dist/antd.min.css';
 
 function News() {
   const [newsInfo, setNewsInfo] = useState('');
@@ -28,8 +29,8 @@ function News() {
           dataSource={newsInfo.news}
           renderItem={(item) => (
             <List.Item
-              // key={item.Title}
-              // extra={ <img src={item.path} width='330px' height='auto'/> }
+              key={item.Title}
+              extra={ <img src={require(`../../img/award.jpg`)} width='380px' height='auto'/> }
             >
               <List.Item.Meta title={item.Title}/>
                 <Content>

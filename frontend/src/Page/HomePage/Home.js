@@ -3,18 +3,12 @@ import styled from "styled-components";
 import { Row, Col, List, Carousel } from 'antd';
 import ActivitySlide from './Slide/ActivitySlide';
 import Footer from '../../Component/Footer';
+import 'antd/dist/antd.min.css';
+import axios from "axios";
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 // import {parseString} from 'xml2js';
 
-// img 
-import Infor_sub from '../../img/subImg/infor_sub.png';
-import Robot_sub from '../../img/subImg/robot_sub.png';
-import Service_sub from '../../img/subImg/service_sub.png';
-import Heal_sub from '../../img/subImg/heal_sub.png';
-import AI_sub from '../../img/subImg/ai_sub.png';
-import Data_sub from '../../img/subImg/data_sub.png';
-import New_lame from '../../img/NewsLAME.png';
-import New_wav2 from '../../img/NewsWav2.png';
-import New_mapping from '../../img/NewsAMapping.png';
+React.useLayoutEffect = React.useEffect;
 
 // 모듈 로드npm
 // var url = "https://techneedle.com/archives/category/default/ai";
@@ -64,18 +58,12 @@ import New_mapping from '../../img/NewsAMapping.png';
 //     });
 // }
 
-const data = [
-  { title: 'Layout-MetaBERT for Metadata Extraction from Scientific Articles (arxiv)' },
-  { title: 'Wav2KWS: Transfer Learning from Speech Representations for Keyword Spotting, IEEE Access.' },
-  { title: 'A Mapping Approach to Identify Player Types for Game Recommendations, Information 2019' },
-  { title: 'Minimally Supervised Relation Identification from Wikipedia Articles, Journal of Information Science Theory and Practice (JISTaP)' },
-  { title: '“When Collective Knowledge Meets Crowd Knowledge in a Smart City: A Prediction Method Combining Open Data Keyword Analysis and Case-Based Reasoning,” Journal of Healthcare Engineering' },
-  { title: 'Sustainable Situation-Aware Recommendation Services with Collective Intelligence, Sustainability' },
-];
 const TOTAL_SLIDES = 2; 
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [actInfo, setActInfo] = useState('');
+  const [newsInfo, setNewsInfo] = useState('');
   const slideRef = useRef(null);
 
   const PrevSlide = () => {
@@ -96,6 +84,25 @@ function Home() {
     slideRef.current.style.transition = 'all 0.5s ease-in-out';
     slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; 
   }, [currentSlide]);
+
+  const activityApi = async () => {
+    axios.get("http://localhost:5000/activity/").then((res) => {
+      setActInfo(res.data);
+      console.log(res.data);
+    });
+  };
+
+  const newsApi = async () => {
+    axios.get("http://localhost:5000/news/").then((res) => {
+      setNewsInfo(res.data);
+      console.log(res.data);
+    });
+  };
+
+  useEffect(() => {
+    activityApi();
+    newsApi();
+  }, []);
 
   return (
     <>
@@ -119,12 +126,12 @@ function Home() {
           </Col>
           <Col flex="40%" style={{width: '150px', marginLeft: '80px'}}>
             <Carousel autoplay>
-              <img src={Infor_sub} width='150px' height='300px' />
-              <img src={Robot_sub} width='150px' height='300px'/>
-              <img src={Service_sub} width='150px' height='300px'/>
-              <img src={Heal_sub} width='150px' height='300px'/>
-              <img src={AI_sub} width='150px' height='300px'/>
-              <img src={Data_sub} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/infor_sub.png')} width='150px' height='300px' />
+              <img src={require('../../img/subImg/robot_sub.png')} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/service_sub.png')} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/heal_sub.png')} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/ai_sub.png')} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/data_sub.png')} width='150px' height='300px'/>
             </Carousel>
           </Col>
         </Row>
@@ -134,20 +141,22 @@ function Home() {
       </Title>
       <Wrapper>
         <Row justify="center">
-          <Col flex="43%" style={{ textAlign: 'center', width: '350px', marginRight: '60px', marginLeft: '20px'}}>
+          <Col flex="43%" style={{ textAlign: 'center', width: '350px', marginRight: '30px'}}>
             <Carousel autoplay effect='fade'>
-              <img src={New_lame} width='380px' height='auto'/>
-              <img src={New_wav2} width='380px' height='auto'/>
-              <img src={New_mapping} width='380px' height='auto'/>
+              {actInfo.items.map((item, index) => (
+                <div key={index}>
+                  <img src={require(`../../img/activityImg/${item.path}`)} width='520px' height='440px' />
+                </div>
+              ))}
             </Carousel>
           </Col>
           <Col flex="45%">
             <List
               size="large"
-              dataSource={data}
+              dataSource={newsInfo.news}
               renderItem={item => (
                 <List.Item>
-                  <List.Item.Meta title={item.title} />
+                  <List.Item.Meta title={item.Title} />
                 </List.Item>
               )}
               footer={
@@ -172,17 +181,17 @@ function Home() {
       <Wrapper>
         <Row justify="center">
           <Col flex='3%' style={{ width: '10px', marginTop: '120px'}}>
-            <SliderButton onClick={PrevSlide}> ◀ </SliderButton>
+            <SliderButton onClick={PrevSlide}> <LeftOutlined /> </SliderButton>
           </Col>
-          <Col flex='70%' style={{ width: '52rem'}} >
+          <Col flex='85%' >
             <SliderRowContainer>
               <SliderContainer ref={slideRef}>
                 <ActivitySlide/>
               </SliderContainer>
             </SliderRowContainer>
           </Col>
-          <Col flex='3%' style={{ width: '10px', marginLeft: '45px', marginTop: '120px'}}>
-            <SliderButton onClick={NextSlide}> ▶ </SliderButton>
+          <Col flex='3%' style={{ width: '10px', marginLeft: '20px', marginTop: '120px'}}>
+            <SliderButton onClick={NextSlide}> <RightOutlined /> </SliderButton>
           </Col>
         </Row>
         <Row style={{ textAlign: 'center' }}>

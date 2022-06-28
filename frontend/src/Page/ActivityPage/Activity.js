@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import { Row, Col, List, Card } from 'antd';
+import 'antd/dist/antd.min.css';
 const { Meta } = Card;
 
 function Activity() {
@@ -25,7 +26,7 @@ function Activity() {
     <>
       <Title>Activity</Title>
       <List
-        itemLayout="vertical"
+        grid={{ gutter: 3, column: 3 }}
         size="large"
         // ghost
         pagination={{ pageSize: 3 }}
@@ -38,7 +39,7 @@ function Activity() {
                   bordered={false}
                   style={{ width: '390px'}}
                   cover={// <img src={require(item.path)}/>
-                    <img src={require(`../../img/activityImg/${item.path}`)}/>
+                    <img src={require(`../../img/activityImg/${item.path}`)} width='220px' height='220px'/>
                   }
                 >
                   <Meta 
@@ -70,7 +71,7 @@ const Title = styled.div`
   font-size: 3.8rem;
   font-weight: 600;
   text-align: center;
-  padding: 1.8% 0% 2% 0%;
+  padding: 1.8% 0% 13% 0%;
   border: 0px;
   color: black;
 `;

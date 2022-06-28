@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Row, Col, Card } from 'antd';
+import { Row, Col, Card, List } from 'antd';
+import axios from "axios";
 
 // img
 import Robot from '../../../img/robot.png';
@@ -10,134 +11,52 @@ import Service from '../../../img/service.jpg';
 const { Meta } = Card;
 
 function ActivitySlide() {
+  const [actInfo, setActInfo] = useState('');
+  let actLength = 0;
+
+  const actInfoApi = async () => {
+    axios.get("http://localhost:5000/activity/").then((res) => {
+      setActInfo(res.data);
+      // setactLength(res.data.length);
+      actLength = res.data.length;
+      console.log(res.data);
+    });
+  };
+
+  useEffect(() => {
+    actInfoApi();
+  }, []);
+  
   return (
     <>
-      <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px'}}>
-        <Card
-          bordered={false}
-          style={{ width: '300px'}}
-          cover={<img src={ Robot}/>}
-        >
-          <Meta 
-            title="체육대회" 
-            description="일자 : 2021.06.19" 
-            style={{ textAlign:'center' }}
-          />
-        </Card>
-      </Col>
-      <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px' }}>
-        <Card
-          bordered={false}
-          style={{ width: '240px'}}
-          cover={<img src={Information}/> }
-          >
-            <Meta 
-              title="세미나" 
-              description="일자 : 2022.01.25" 
-              style={{ textAlign:'center' }}
-            />
-          </Card>
-        </Col>
-        <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px' }}>
-        <Card
-          bordered={false}
-          style={{ width: '255px'}}
-          cover={<img src={Service}/> }
-        >
-          <Meta 
-            title="MT" 
-            description="일자 : 2021.11.05" 
-            style={{ textAlign:'center' }}
-          />
-        </Card>
-      </Col>
-      <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px'}}>
-        <Card
-          bordered={false}
-          style={{ width: '300px'}}
-          cover={<img src={ Robot}/>}
-        >
-          <Meta 
-            title="체육대회" 
-            description="일자 : 2021.06.19" 
-            style={{ textAlign:'center' }}
-          />
-        </Card>
-      </Col>
-      <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px' }}>
-        <Card
-          bordered={false}
-          style={{ width: '240px'}}
-          cover={<img src={Information}/> }
-          >
-            <Meta 
-              title="세미나" 
-              description="일자 : 2022.01.25" 
-              style={{ textAlign:'center' }}
-            />
-          </Card>
-        </Col>
-        <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px'}}>
-        <Card
-          bordered={false}
-          style={{ width: '255px' }}
-          cover={<img src={Service}/> }
-        >
-          <Meta 
-            title="MT" 
-            description="일자 : 2021.11.05" 
-            style={{ textAlign:'center' }}
-          />
-        </Card>
-      </Col>
-      <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px' }}>
-        <Card
-          bordered={false}
-          style={{ width: '240px'}}
-          cover={<img src={Information}/> }
-          >
-            <Meta 
-              title="세미나" 
-              description="일자 : 2022.01.25" 
-              style={{ textAlign:'center' }}
-            />
-          </Card>
-        </Col>
-        <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px'}}>
-        <Card
-          bordered={false}
-          style={{ width: '255px' }}
-          cover={<img src={Service}/> }
-        >
-          <Meta 
-            title="MT" 
-            description="일자 : 2021.11.05" 
-            style={{ textAlign:'center' }}
-          />
-        </Card>
-      </Col>
-      <Col flex="25%" style={{ width: '250px', marginRight: '15px', marginLeft: '15px'}}>
-        <Card
-          bordered={false}
-          style={{ width: '300px'}}
-          cover={<img src={ Robot}/>}
-        >
-          <Meta 
-            title="체육대회" 
-            description="일자 : 2021.06.19" 
-            style={{ textAlign:'center' }}
-          />
-        </Card>
-      </Col>
+      <List
+        grid={{ gutter: 3, column: 3 }}
+        dataSource={actInfo.items}
+        renderItem={(item) => (
+          <List.Item>
+            <Row justify='center'>
+              <Col flex="10%" style={{ width: '400px', marginRight: '15px', marginLeft: '15px'}}>
+                <Card
+                  bordered={false}
+                  style={{ width: '300px'}}
+                  cover={// <img src={require(item.path)}/>
+                    <img src={require(`../../../img/activityImg/${item.path}`)}  width='300px' height='220px' />
+                  }
+                >
+                  <Meta 
+                    title= {item.name}
+                    description={item.date}
+                    style={{ textAlign:'center' }}
+                  />
+                </Card>
+              </Col>
+            </Row>
+            {/* <List.Item.Meta title={item.title}/> */}
+          </List.Item>
+        )}
+      />
     </>
   );
 }
-
-const IMG = styled.img`
-  width: 370px;
-  height: auto;
-  margin-left: 20px;
-  margin-right: 22px;
-`;
 
 export default ActivitySlide;
