@@ -3,12 +3,10 @@ import styled from "styled-components";
 import { Row, Col, List, Carousel } from 'antd';
 import ActivitySlide from './Slide/ActivitySlide';
 import Footer from '../../Component/Footer';
-import 'antd/dist/antd.min.css';
+import 'antd/dist/antd.less';
 import axios from "axios";
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 // import {parseString} from 'xml2js';
-
-React.useLayoutEffect = React.useEffect;
 
 // 모듈 로드npm
 // var url = "https://techneedle.com/archives/category/default/ai";
@@ -126,12 +124,12 @@ function Home() {
           </Col>
           <Col flex="40%" style={{width: '150px', marginLeft: '80px'}}>
             <Carousel autoplay>
-              <img src={require('../../img/subImg/infor_sub.png')} width='150px' height='300px' />
-              <img src={require('../../img/subImg/robot_sub.png')} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/service_sub.png')} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/heal_sub.png')} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/ai_sub.png')} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/data_sub.png')} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/infor_sub.png').default} width='150px' height='300px' />
+              <img src={require('../../img/subImg/robot_sub.png').default} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/service_sub.png').default} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/heal_sub.png').default} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/ai_sub.png').default} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/data_sub.png').default} width='150px' height='300px'/>
             </Carousel>
           </Col>
         </Row>
@@ -143,9 +141,9 @@ function Home() {
         <Row justify="center">
           <Col flex="43%" style={{ textAlign: 'center', width: '350px', marginRight: '30px'}}>
             <Carousel autoplay effect='fade'>
-              {actInfo.items.map((item, index) => (
+              {actInfo.items && actInfo.items.map((item, index) => (
                 <div key={index}>
-                  <img src={require(`../../img/activityImg/${item.path}`)} width='520px' height='440px' />
+                  <img src={require(`../../img/activityImg/${item.path}`).default} width='520px' height='440px' />
                 </div>
               ))}
             </Carousel>

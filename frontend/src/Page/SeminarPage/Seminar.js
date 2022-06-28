@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import { Table } from 'antd';
-import 'antd/dist/antd.min.css';
+import 'antd/dist/antd.less';
 
 function Seminar() {
   const [seminarInfo, setSeminarInfo] = useState('');

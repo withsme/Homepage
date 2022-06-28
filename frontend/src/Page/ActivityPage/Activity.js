@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import { Row, Col, List, Card } from 'antd';
-import 'antd/dist/antd.min.css';
+import 'antd/dist/antd.less';
 const { Meta } = Card;
 
 function Activity() {
@@ -25,35 +25,42 @@ function Activity() {
   return (
     <>
       <Title>Activity</Title>
-      <List
-        grid={{ gutter: 3, column: 3 }}
-        size="large"
-        // ghost
-        pagination={{ pageSize: 3 }}
-        dataSource={imgInfo.items}
-        renderItem={(item) => (
-          <List.Item>
-            <Row justify='center'>
-              <Col flex="25%" style={{ width: '310px', marginRight: '50px'}}>
-                <Card
-                  bordered={false}
-                  style={{ width: '390px'}}
-                  cover={// <img src={require(item.path)}/>
-                    <img src={require(`../../img/activityImg/${item.path}`)} width='220px' height='220px'/>
-                  }
-                >
-                  <Meta 
-                    title= {item.name}
-                    description={item.date}
-                    style={{ textAlign:'center' }}
-                  />
-                </Card>
-              </Col>
-            </Row>
-            {/* <List.Item.Meta title={item.title}/> */}
-          </List.Item>
-        )}
-      />
+      <Wrapper>
+        <List
+          grid={{ gutter: 3, column: 3 }}
+          size="large"
+          // ghost
+          pagination={{ pageSize: 3 }}
+          dataSource={imgInfo.items}
+          renderItem={(item) => (
+            <List.Item>
+              <Row justify='center'>
+                <Col flex="25%" style={{ width: '310px', marginRight: '60px'}}>
+                  <Card
+                    bordered={false}
+                    style={{ width: '390px'}}
+                    cover={// <img src={require(item.path)}/>
+                      <img 
+                        src={require(`../../img/activityImg/${item.path}`).default} 
+                        width='220px' 
+                        height='220px'
+                        style={{ marginRight: '10px'}}
+                      />
+                    }
+                  >
+                    <Meta 
+                      title= {item.name}
+                      description={item.date}
+                      style={{ textAlign:'center'}}
+                    />
+                  </Card>
+                </Col>
+              </Row>
+              {/* <List.Item.Meta title={item.title}/> */}
+            </List.Item>
+          )}
+        />
+      </Wrapper>
     </>
   );
 };
@@ -64,6 +71,7 @@ const Wrapper = styled.div`
   background-color: white;
   line-height: 1.5;
   padding: 2% 10% 3% 10%;
+  text-align: center;
 `;
 
 const Title = styled.div`

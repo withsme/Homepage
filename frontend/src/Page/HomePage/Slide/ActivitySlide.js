@@ -40,13 +40,13 @@ function ActivitySlide() {
                   bordered={false}
                   style={{ width: '300px'}}
                   cover={// <img src={require(item.path)}/>
-                    <img src={require(`../../../img/activityImg/${item.path}`)}  width='300px' height='220px' />
+                    <img src={require(`../../../img/activityImg/${item.path}`).default} width='300px' height='220px' />
                   }
                 >
                   <Meta 
+                    style={{ textAlign:'center' }}
                     title= {item.name}
                     description={item.date}
-                    style={{ textAlign:'center' }}
                   />
                 </Card>
               </Col>

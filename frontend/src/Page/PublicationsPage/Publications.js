@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import styled from "styled-components";
 import { Collapse } from 'antd';
-import 'antd/dist/antd.min.css';
+import 'antd/dist/antd.less';
 
 const { Panel } = Collapse;
 

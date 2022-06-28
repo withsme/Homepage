@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { Row, Col, List, Pagination } from 'antd';
 import axios from "axios";
-import 'antd/dist/antd.min.css';
+import 'antd/dist/antd.less';
 
 function News() {
   const [newsInfo, setNewsInfo] = useState('');
