@@ -7,110 +7,85 @@ import 'antd/dist/antd.less';
 const { Panel } = Collapse;
 
 function Publications() {
-    const [sheetInfo, setSheetInfo] = useState('');
+  const [sheetInfo, setSheetInfo] = useState(null);
 
-    const publicationInfoApi = async () => {
-      axios.get("http://localhost:5000/publication/").then((res) => {
-        setSheetInfo(res.data); 
-      });
-    };
+  const publicationInfoApi = async () => {
+    axios.get("http://localhost:5000/publication/").then((res) => {
+      excelManufacture(res.data)
+      //setSheetInfo(res.data); 
+    });
+  };
 
-    // function temp(values) {
-    //     console.log(values);
-    //     return (
-    //       <Content>  
-    //         {values.Title}
-    //         <p> {values.People} </p>
-    //       </Content>
-    //     )
-    // }
+  const excelManufacture = (rawData)=>{
+    let arr = [];
+    for(var key in rawData){
+      let obj = {};
+      if(key === "Registered Patents")
+        obj['name']='Registered Patents / Patent Application'; // 약간 야매 .... 
+      else
+        obj['name'] = key;
+      
+      obj['values'] = rawData[key];
+      arr.push(obj);
+    }
+    // console.log(arr);
+    setSheetInfo(arr);
+  }
 
-    // const renderFilterValues = (filterValues) => {
-    //   switch(filterValues) {
-    //     case 'International Journal Papers' :
-    //       sheetInfo.InternationalJournalPapers && sheetInfo.InternationalJournalPapers.map((values)  => { 
-    //         return (
-    //           <Content>  
-    //             {values.Title}
-    //             <p> {values.People} </p>
-    //           </Content>
-    //         )
-    //       })
-    //       break;
-    //     case 'Domestic Journal Papers' :
-    //       sheetInfo.DomesticJournalPapers && sheetInfo.DomesticJournalPapers.map((values)  => { 
-    //         temp(values);
-    //       })
-    //       break;
-    //     case 'International Conference Papers' :
-    //       sheetInfo.InternationalConferencePapers && sheetInfo.InternationalConferencePapers.map((values)  => { 
-    //         temp(values);
-    //       })
-    //       break;
-    //     case 'International Workshop Papers' :
-    //       sheetInfo.InternationalWorkshopPapers && sheetInfo.InternationalWorkshopPapers.map((values)  => { 
-    //         temp(values);
-    //       })
-    //       break;
-    //     case 'Domestic Conference Papers' :
-    //       sheetInfo.DomesticConferencePapers && sheetInfo.DomesticConferencePapers.map((values)  => { 
-    //         temp(values);
-    //       })
-    //       break;
-    //     case 'Registered Patents' :
-    //       sheetInfo.RegisteredPatents && sheetInfo.RegisteredPatents.map((values)  => { 
-    //         temp(values);
-    //       })
-    //       break;
-    //     case 'Book' :
-    //       sheetInfo.Book && sheetInfo.Book.map((values)  => {
-    //         temp(values);
-    //       })
-    //       break;
-    //   }
-    // }
-
-    // const renderFiltering = sheetInfo.SheetName && sheetInfo.SheetName.map((filter, index)  => { // {} 처리 
-    //   return (
-    //     <Panel header={filter.name} key={filter.name} style={{ fontSize:"25px"}}>
-    //       {renderFilterValues(filter.name)}
-    //     </Panel>
-    //   )
-    // })
-
-    const renderFiltering = sheetInfo.SheetName && sheetInfo.SheetName.map((filter, index)  => { // {} 처리 
-      return (
-        <Panel header={filter.name} key={filter.name} style={{ fontSize:"25px"}}>
-          {
-            sheetInfo.InternationalJournalPapers && sheetInfo.InternationalJournalPapers.map((values)  => { 
-              return (
-                <Content>  
-                  {values.Title}
-                  <p> {values.People} </p>
-                </Content>
-              )
-            })
-          }
-        </Panel>
-      )
-    })
-  
-    useEffect(() => {
-      publicationInfoApi();
-    }, []);
-    
+  const renderFiltering = sheetInfo && sheetInfo.map((sheet, index)  => { // {} 처리 
     return (
-      <>
-        <Title>
-          Publications
-        </Title>
-        <Wrapper>
-          <Collapse style={{ backgroundColor:"white"}} bordered={false}>
-            {renderFiltering}
-          </Collapse>
-        </Wrapper>
-      </>
-    );
+      <Panel header={sheet.name} key={sheet.name} style={{ fontSize:"25px"}}>
+        {
+          sheet.values && sheet.values.map((value)  => { 
+            return (
+              <Content>  
+                {value.Title}
+                <p> {value.People} </p>
+              </Content>
+            )
+          })
+        }
+      </Panel>
+    )
+  })
+
+  for(var key in sheetInfo) {
+    console.log("key: ", key);
+    console.log("value: ", sheetInfo[key]);
+  }
+  // const renderFiltering = sheetInfo.SheetName && sheetInfo.SheetName.map((filter, index)  => { // {} 처리 
+  //   return (
+  //     <Panel header={filter.name} key={filter} style={{ fontSize:"25px"}}>
+  //       {
+  //         sheetInfo[filter] && sheetInfo[filter].map((values)  => { 
+  //           return (
+  //             <Content>  
+  //               {values.Title}
+  //               <p> {values.People} </p>
+  //             </Content>
+  //           )
+  //         })
+  //       }
+  //     </Panel>
+  //   )
+  // })
+
+  useEffect(() => {
+    publicationInfoApi();
+  }, []);
+  
+  return (
+    <>
+      <Title>
+        Publications
+      </Title>
+      <Wrapper>
+        <Collapse style={{ backgroundColor:"white"}} bordered={false}>
+          {renderFiltering}
+        </Collapse>
+      </Wrapper>
+    </>
+  );
 };
 
 

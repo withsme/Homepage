@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require("fs"); 
 
 // const path = require("path"); // 쓸 줄 모름
-const usePath = 'C:/home/Homepage/frontend/src/Use';
+const usePath = 'C:/home/Homepage/frontend/src/Use'; // 이 폴더에 있는 거 읽어서 
 
 router.get('/', (req, res)=>{
     var dir = fs.readdirSync(usePath + "/seminarUse/"); // 디렉토리를 읽어온다

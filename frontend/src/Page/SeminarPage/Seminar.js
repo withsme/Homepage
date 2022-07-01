@@ -21,7 +21,7 @@ function Seminar() {
     { title: 'Source', width: 80, dataIndex: 'source', key: 'source' },
     { title: 'Year', width: 80, dataIndex: 'year', key: 'year' },
     { title: 'Area', width: 80, dataIndex: 'area', key: 'area' },
-    { title: 'Paper', width: 80, dataIndex: 'paper', key: 'paper', render: link => <a href='paper'>[link]</a> },
+    { title: 'Paper', width: 80, dataIndex: 'paper', key: 'paper', render: link => <a target="_blank"href="https://1drv.ms/p/s!AomuvyaYV8jFhah4vINwJmnXPSNtQg?e=kpYJk9">[link]</a> },
     { title: 'Slides', width: 80, dataIndex: 'slides', key: 'slides' , render: link => <a href=''>[link]</a> },
   ];
   

@@ -35,23 +35,22 @@ function Activity() {
           renderItem={(item) => (
             <List.Item>
               <Row justify='center'>
-                <Col flex="25%" style={{ width: '310px', marginRight: '60px'}}>
+                <Col flex="25%" style={{ width: '310px', marginRight: '60px', textAlign:'center'}}>
                   <Card
                     bordered={false}
                     style={{ width: '390px'}}
-                    cover={// <img src={require(item.path)}/>
+                    cover={
                       <img 
                         src={require(`../../img/activityImg/${item.path}`).default} 
                         width='220px' 
                         height='220px'
-                        style={{ marginRight: '10px'}}
                       />
                     }
                   >
                     <Meta 
                       title= {item.name}
                       description={item.date}
-                      style={{ textAlign:'center'}}
+                      style={{ justifyContent:'center'}}
                     />
                   </Card>
                 </Col>

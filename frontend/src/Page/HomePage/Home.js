@@ -122,14 +122,14 @@ function Home() {
               Kumoh National Institute of Technology (KIT), Gumi, South Korea
             </Content>
           </Col>
-          <Col flex="40%" style={{width: '150px', marginLeft: '80px'}}>
+          <Col flex="40%" style={{width: '140px', marginLeft: '80px'}}>
             <Carousel autoplay>
-              <img src={require('../../img/subImg/infor_sub.png').default} width='150px' height='300px' />
-              <img src={require('../../img/subImg/robot_sub.png').default} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/service_sub.png').default} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/heal_sub.png').default} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/ai_sub.png').default} width='150px' height='300px'/>
-              <img src={require('../../img/subImg/data_sub.png').default} width='150px' height='300px'/>
+              <img src={require('../../img/subImg/infor_sub.png').default} width='140px' height='300px' />
+              <img src={require('../../img/subImg/robot_sub.png').default} width='140px' height='300px'/>
+              <img src={require('../../img/subImg/service_sub.png').default} width='140px' height='300px'/>
+              <img src={require('../../img/subImg/heal_sub.png').default} width='140px' height='300px'/>
+              <img src={require('../../img/subImg/ai_sub.png').default} width='140px' height='300px'/>
+              <img src={require('../../img/subImg/data_sub.png').default} width='140px' height='300px'/>
             </Carousel>
           </Col>
         </Row>

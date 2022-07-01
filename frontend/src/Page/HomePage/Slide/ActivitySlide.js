@@ -2,11 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Row, Col, Card, List } from 'antd';
 import axios from "axios";
-
-// img
-import Robot from '../../../img/robot.png';
-import Information from '../../../img/information.png';
-import Service from '../../../img/service.jpg';
+import 'antd/dist/antd.css';
 
 const { Meta } = Card;
 
@@ -29,22 +25,22 @@ function ActivitySlide() {
   
   return (
     <>
+    
       <List
         grid={{ gutter: 3, column: 3 }}
         dataSource={actInfo.items}
         renderItem={(item) => (
           <List.Item>
             <Row justify='center'>
-              <Col flex="10%" style={{ width: '400px', marginRight: '15px', marginLeft: '15px'}}>
+              <Col flex="50%" style={{ width: '400px', marginRight: '15px', marginLeft: '15px', textAlign: 'center'}}>
                 <Card
                   bordered={false}
-                  style={{ width: '300px'}}
-                  cover={// <img src={require(item.path)}/>
-                    <img src={require(`../../../img/activityImg/${item.path}`).default} width='300px' height='220px' />
+                  style={{ width: '300px', }}
+                  cover={
+                    <img src={require(`../../../img/activityImg/${item.path}`).default} width='150px' height='220px' />
                   }
                 >
                   <Meta 
-                    style={{ textAlign:'center' }}
                     title= {item.name}
                     description={item.date}
                   />

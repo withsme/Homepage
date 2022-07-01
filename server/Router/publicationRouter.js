@@ -16,7 +16,7 @@ router.get('/', (req, res)=>{
         sheet[sheetname] = xlsx.utils.sheet_to_json(excelFile.Sheets[sheetname]);
     }
 
-    // console.log(sheet);
+    console.log(sheet);
     res.send(sheet);
 });
 
