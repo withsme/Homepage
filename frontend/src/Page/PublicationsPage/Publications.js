@@ -49,27 +49,6 @@ function Publications() {
     )
   })
 
-  for(var key in sheetInfo) {
-    console.log("key: ", key);
-    console.log("value: ", sheetInfo[key]);
-  }
-  // const renderFiltering = sheetInfo.SheetName && sheetInfo.SheetName.map((filter, index)  => { // {} 처리 
-  //   return (
-  //     <Panel header={filter.name} key={filter} style={{ fontSize:"25px"}}>
-  //       {
-  //         sheetInfo[filter] && sheetInfo[filter].map((values)  => { 
-  //           return (
-  //             <Content>  
-  //               {values.Title}
-  //               <p> {values.People} </p>
-  //             </Content>
-  //           )
-  //         })
-  //       }
-  //     </Panel>
-  //   )
-  // })
-
   useEffect(() => {
     publicationInfoApi();
   }, []);

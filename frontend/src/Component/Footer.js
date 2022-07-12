@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from "styled-components";
 import { Row, Col } from 'antd';
+var options = {
+  center: new window.kakao.maps.LatLng(36.145534, 128.392320),
+  level: 3,
+};
 
-function Footer () {
-  // 카카오맵 도메인 이슈 같은데 해결이 안됨
-  // const { kakao } = window;
+function Footer() {
+  const container = useRef(null);
 
-  // useEffect(()=>{
-  //   var container = document.getElementById('map');
-  //   var options = {
-  //     center: new window.kakao.maps.LatLng(36.145534, 128.392320),
-  //     level: 3
-  //   };
-  
-  //   var map = new window.kakao.maps.Map(container, options);
-  //   var markerPosition  = new window.kakao.maps.LatLng(36.145534, 128.392320); 
-  //   var marker = new window.kakao.maps.Marker({
-  //     position: markerPosition
-  //   });
+  useEffect(()=>{
+    var map = new window.kakao.maps.Map(container.current, options);
+    var markerPosition  = new window.kakao.maps.LatLng(36.145534, 128.392320); 
+    var marker = new window.kakao.maps.Marker({
+      position: markerPosition
+    });
     
-  //   marker.setMap(map);
-  // }, [])
-
+    marker.setMap(map);
+    return () => {};
+  }, [])
+ 
   return ( 
     <Wrapper> 
       <Row>
@@ -42,16 +40,17 @@ function Footer () {
           <Content>• Tel</Content>
           <p>+82-54-478-7536</p>
         </Col>
-            
+
         <Col flex='30%'>
-          {/* <div 
-            id={"map"} 
+          <div 
+            className="map"
             style = {{
               width:"250px", 
               height:"250px",
             }}
+            ref={container}
           >
-          </div> */}
+          </div>
         </Col>
       </Row>
     </Wrapper> 
@@ -66,7 +65,6 @@ const Wrapper = styled.div`
   background-color: #C2C2C2;
   line-height: 1.5;
   margin-top: auto;
-
   p {
     font-size: 0.9rem;
     padding: 0% 0% 0% 4%;
